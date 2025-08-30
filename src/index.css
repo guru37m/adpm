@@ -210,15 +210,8 @@
 }
 
 /* Anti-placeholder CSS - previne logos automáticos (SELETIVO) */
-.header-logo-wrap [data-slot="avatar-fallback"],
-.header-logo-wrap .avatar-fallback,
-.header-logo-wrap .brand-icon,
-.header-logo-wrap svg[aria-hidden="true"] {
-  display: none !important;
-}
-
-/* Logo positioning and sizing */
 :root { --stickybar-h: 56px; }
+
 .header-logo-wrap {
   display: flex; 
   justify-content: center; 
@@ -233,6 +226,8 @@
   filter: none !important;
   image-rendering: auto;
 }
+
+/* mobile */
 @media (max-width: 640px) {
   :root { --stickybar-h: 52px; }
   .header-logo-wrap { 
@@ -241,4 +236,14 @@
   .header-logo { 
     max-height: 44px; 
   }
+}
+
+/* 🔒 Bloqueio SELETIVO de placeholders no HEADER (não pega sua <img>) */
+.header-logo-wrap [data-slot="avatar-fallback"],
+.header-logo-wrap .avatar-fallback,
+.header-logo-wrap .brand-icon,
+.header-logo-wrap svg[aria-hidden="true"],
+.header-logo-wrap [class*="Logo"]:not(img),
+.header-logo-wrap [class*="logo"]:not(img) {
+  display: none !important;
 }
