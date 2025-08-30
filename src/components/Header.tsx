@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
-import BrandLogo from "@/components/BrandLogo";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -44,12 +43,10 @@ const Header = () => {
 
   return (
     <>
-      {/* Header with Logo */}
-      <header className="adpm-header-dark pt-20 md:pt-24 pb-8 relative z-40">
+      {/* Header without Logo - just spacing */}
+      <header className="adpm-header-dark pt-16 md:pt-20 pb-4 relative z-40">
         <div className="container mx-auto px-4">
-          <div className="header-logo-wrap" aria-label="ADPM Supletivo EAD">
-            <BrandLogo />
-          </div>
+          {/* Empty header for spacing */}
         </div>
       </header>
 

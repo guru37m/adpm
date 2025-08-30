@@ -16,7 +16,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="adpm-hero-gradient py-16 md:py-24">
+    <section className="adpm-hero-gradient pt-8 pb-16 md:pb-24">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
