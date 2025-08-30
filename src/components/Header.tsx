@@ -46,14 +46,13 @@ const Header = () => {
       {/* Header with Logo */}
       <header className="adpm-header-dark pt-20 md:pt-24 pb-8 relative z-40">
         <div className="container mx-auto px-4">
-          <div className="header-logo-wrap flex justify-center items-center">
+          <div className="header-logo-wrap" aria-label="ADPM Supletivo EAD">
             <img 
               src="/adpm-logo.png?v=3"
               alt="ADPM Supletivo EAD"
-              className="header-logo h-11 md:h-14 w-auto object-contain"
+              className="header-logo"
               decoding="async"
               loading="eager"
-              style={{ filter: 'none', imageRendering: 'auto' }}
             />
           </div>
         </div>

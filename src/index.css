@@ -209,11 +209,11 @@
   }
 }
 
-/* Anti-placeholder CSS - previne logos automáticos */
-.header-logo-wrap svg,
-.header-logo-wrap [class*="logo"],
-.header-logo-wrap [class*="brand-icon"],
-.header-logo-wrap [data-slot="avatar-fallback"] {
+/* Anti-placeholder CSS - previne logos automáticos (SELETIVO) */
+.header-logo-wrap [data-slot="avatar-fallback"],
+.header-logo-wrap .avatar-fallback,
+.header-logo-wrap .brand-icon,
+.header-logo-wrap svg[aria-hidden="true"] {
   display: none !important;
 }
 
@@ -226,7 +226,7 @@
   padding-top: calc(var(--stickybar-h) + 12px);
 }
 .header-logo {
-  max-height: 54px; 
+  max-height: 56px; 
   height: auto; 
   width: auto; 
   object-fit: contain; 
