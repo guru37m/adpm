@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
+import BrandLogo from "@/components/BrandLogo";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -47,13 +48,7 @@ const Header = () => {
       <header className="adpm-header-dark pt-20 md:pt-24 pb-8 relative z-40">
         <div className="container mx-auto px-4">
           <div className="header-logo-wrap" aria-label="ADPM Supletivo EAD">
-            <img 
-              src="/adpm-logo.png?v=3"
-              alt="ADPM Supletivo EAD"
-              className="header-logo"
-              decoding="async"
-              loading="eager"
-            />
+            <BrandLogo />
           </div>
         </div>
       </header>
