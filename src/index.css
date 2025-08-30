@@ -208,3 +208,37 @@
     transform: scale(1.05);
   }
 }
+
+/* Anti-placeholder CSS - previne logos automáticos */
+.header-logo-wrap svg,
+.header-logo-wrap [class*="logo"],
+.header-logo-wrap [class*="brand-icon"],
+.header-logo-wrap [data-slot="avatar-fallback"] {
+  display: none !important;
+}
+
+/* Logo positioning and sizing */
+:root { --stickybar-h: 56px; }
+.header-logo-wrap {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  padding-top: calc(var(--stickybar-h) + 12px);
+}
+.header-logo {
+  max-height: 54px; 
+  height: auto; 
+  width: auto; 
+  object-fit: contain; 
+  filter: none !important;
+  image-rendering: auto;
+}
+@media (max-width: 640px) {
+  :root { --stickybar-h: 52px; }
+  .header-logo-wrap { 
+    padding-top: calc(var(--stickybar-h) + 8px); 
+  }
+  .header-logo { 
+    max-height: 44px; 
+  }
+}
