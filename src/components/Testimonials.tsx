@@ -8,7 +8,7 @@ const Testimonials = () => {
       rating: 5,
       date: "jan/2025",
       text: "Fui atendida no Whats de forma super rápida. Em menos de 3 meses finalizei tudo e já estou com o diploma. Recomendo demais!",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b825?w=150&h=150&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
     },
     {
       name: "Rafael Nogueira", 
