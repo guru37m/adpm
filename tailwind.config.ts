@@ -19,6 +19,19 @@ export default {
 		},
 		extend: {
 			colors: {
+				/* ADPM Brand Colors */
+				'adpm-dark': 'hsl(240 13% 6%)',
+				'adpm-dark-secondary': 'hsl(225 10% 11%)', 
+				'adpm-orange': 'hsl(32 100% 50%)',
+				'adpm-white': 'hsl(0 0% 100%)',
+				'adpm-light-gray': 'hsl(216 33% 97%)',
+				'adpm-gray': 'hsl(218 22% 91%)',
+				'adpm-text-dark': 'hsl(225 33% 9%)',
+				'adpm-text-secondary': 'hsl(225 25% 15%)',
+				'adpm-green': 'hsl(150 81% 44%)',
+				'adpm-yellow': 'hsl(48 100% 52%)',
+				
+				/* Semantic tokens */
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,11 +97,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'price-pulse': {
+					'0%, 100%': {
+						color: 'hsl(150 81% 44%)'
+					},
+					'50%': {
+						color: 'hsl(48 100% 52%)'
+					}
+				},
+				'countdown-pulse': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(1.05)'
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'price-pulse': 'price-pulse 3s ease-in-out infinite',
+				'countdown-pulse': 'countdown-pulse 1s ease-in-out infinite',
+				'fade-in': 'fade-in 0.3s ease-out'
 			}
 		}
 	},
