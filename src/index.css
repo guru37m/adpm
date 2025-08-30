@@ -136,6 +136,21 @@
     animation: price-pulse 3s ease-in-out infinite;
   }
   
+  /* Preço antigo com risco vermelho (sem X por cima) */
+  .old-price {
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #ff3b30;
+    opacity: .9;
+  }
+  .new-price {
+    font-weight: 800;
+    font-size: clamp(24px,4.5vw,36px);
+  }
+  .installments {
+    font-weight: 700;
+  }
+  
   .adpm-strikethrough-price {
     @apply relative;
   }
@@ -212,6 +227,43 @@
 /* Anti-placeholder CSS - previne logos automáticos (SELETIVO) */
 :root { --stickybar-h: 56px; }
 
+#adpm-fixed-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: calc(var(--stickybar-h) + 12px);
+  position: relative;
+  z-index: 5;
+  background-color: hsl(var(--adpm-dark));
+}
+#adpm-fixed-logo img {
+  max-height: 56px;
+  height: auto; 
+  width: auto;
+  object-fit: contain;
+  filter: none !important;
+  image-rendering: auto;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+  :root { --stickybar-h: 52px; }
+  #adpm-fixed-logo { 
+    padding-top: calc(var(--stickybar-h) + 8px); 
+  }
+  #adpm-fixed-logo img { 
+    max-height: 44px; 
+  }
+}
+
+/* Mata qualquer fallback de avatar/logo AUTOMÁTICO que apareça no header/hero */
+header [data-slot="avatar-fallback"],
+header .avatar-fallback,
+header .brand-icon,
+header svg[aria-hidden="true"] {
+  display: none !important;
+}
+
 .header-logo-wrap {
   display: flex; 
   justify-content: center; 
@@ -225,17 +277,6 @@
   object-fit: contain; 
   filter: none !important;
   image-rendering: auto;
-}
-
-/* mobile */
-@media (max-width: 640px) {
-  :root { --stickybar-h: 52px; }
-  .header-logo-wrap { 
-    padding-top: calc(var(--stickybar-h) + 8px); 
-  }
-  .header-logo { 
-    max-height: 44px; 
-  }
 }
 
 /* 🔒 Bloqueio SELETIVO de placeholders no HEADER (não pega sua <img>) */

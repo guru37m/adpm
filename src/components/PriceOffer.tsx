@@ -33,13 +33,13 @@ const PriceOffer = () => {
 
           <div className="bg-card border border-border rounded-xl p-8 md:p-12 shadow-lg mb-8">
             <div className="mb-6">
-              <p className="text-2xl md:text-3xl font-bold text-muted-foreground mb-2" style={{textDecoration: 'line-through', textDecorationColor: '#ff3b30', textDecorationThickness: '3px'}}>
+              <p className="old-price text-2xl md:text-3xl font-bold text-muted-foreground mb-2">
                 De R$ 1.600,00
               </p>
-              <div className="adpm-price-highlight text-4xl md:text-5xl font-bold mb-2">
+              <div className="new-price adpm-price-highlight text-4xl md:text-5xl font-bold mb-2">
                 Por apenas R$ 749,00
               </div>
-              <p className="text-xl font-semibold text-muted-foreground">
+              <p className="installments text-xl font-semibold text-muted-foreground">
                 ou <strong>10× de R$ 74,90</strong> no cartão
               </p>
             </div>

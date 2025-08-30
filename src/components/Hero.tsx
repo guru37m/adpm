@@ -76,11 +76,11 @@ const Hero = () => {
             <div className="aspect-video w-full max-w-md rounded-xl overflow-hidden shadow-2xl bg-black">
               <iframe
                 src="https://www.youtube.com/embed/4jY96QBv-H4?rel=0&modestbranding=1&playsinline=1"
-                title="ADPM Supletivo EAD - Como funciona o EJA online"
+                title="Depoimento ADPM"
                 loading="eager"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
-                className="w-full h-full border-0"
+                style={{width: '100%', aspectRatio: '16/9', border: 0, borderRadius: '12px', background: '#000'}}
               />
             </div>
           </div>
