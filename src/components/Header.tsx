@@ -45,13 +45,13 @@ const Header = () => {
   return (
     <>
       {/* Header with Logo */}
-      <header className="adpm-hero-gradient py-6 relative z-40">
+      <header className="adpm-header-dark py-8 relative z-40">
         <div className="container mx-auto px-4">
           <div className="flex justify-center">
             <img 
               src={adpmLogo} 
               alt="ADPM Supletivo EAD - Reconhecido pelo MEC" 
-              className="h-10 md:h-12 max-w-none object-contain" 
+              className="h-16 md:h-20 max-w-none object-contain" 
               loading="eager"
             />
           </div>

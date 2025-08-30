@@ -80,13 +80,18 @@ const Hero = () => {
             <div className="relative group cursor-pointer" onClick={() => setShowVideo(true)}>
               <div className="aspect-video w-full max-w-md bg-adpm-dark rounded-xl overflow-hidden shadow-2xl">
                 <img 
-                  src={`https://img.youtube.com/vi/4jY96QBv-H4/maxresdefault.jpg`}
+                  src="https://img.youtube.com/vi/4jY96QBv-H4/maxresdefault.jpg"
                   alt="Vídeo explicativo sobre o EJA ADPM - Como funciona o supletivo online"
                   className="w-full h-full object-cover"
-                  loading="lazy"
+                  loading="eager"
+                  onError={(e) => {
+                    // Fallback to high quality thumbnail if maxres fails
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://img.youtube.com/vi/4jY96QBv-H4/hqdefault.jpg";
+                  }}
                 />
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-colors">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                     <Play className="w-8 h-8 text-primary-foreground ml-1" />
                   </div>
                 </div>
