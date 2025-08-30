@@ -1,10 +1,6 @@
-import { Play, MessageCircle, ShieldCheck, Award, Headphones } from "lucide-react";
-import { useState } from "react";
-import VideoModal from "./VideoModal";
+import { MessageCircle, ShieldCheck, Award, Headphones } from "lucide-react";
 
 const Hero = () => {
-  const [showVideo, setShowVideo] = useState(false);
-  
   const whatsappUrl = "https://wa.me/5516997660880?text=Quero%20Meu%20Diploma%20do%20EJA";
 
   const handleWhatsAppClick = () => {
@@ -75,38 +71,21 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Video Thumbnail */}
+          {/* Right Column - Video */}
           <div className="flex justify-center">
-            <div className="relative group cursor-pointer" onClick={() => setShowVideo(true)}>
-              <div className="aspect-video w-full max-w-md bg-adpm-dark rounded-xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://img.youtube.com/vi/4jY96QBv-H4/maxresdefault.jpg"
-                  alt="Vídeo explicativo sobre o EJA ADPM - Como funciona o supletivo online"
-                  className="w-full h-full object-cover"
-                  loading="eager"
-                  onError={(e) => {
-                    // Fallback to high quality thumbnail if maxres fails
-                    const target = e.target as HTMLImageElement;
-                    target.src = "https://img.youtube.com/vi/4jY96QBv-H4/hqdefault.jpg";
-                  }}
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-colors">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                    <Play className="w-8 h-8 text-primary-foreground ml-1" />
-                  </div>
-                </div>
-              </div>
+            <div className="aspect-video w-full max-w-md rounded-xl overflow-hidden shadow-2xl bg-black">
+              <iframe
+                src="https://www.youtube.com/embed/4jY96QBv-H4?rel=0&modestbranding=1&playsinline=1"
+                title="ADPM Supletivo EAD - Como funciona o EJA online"
+                loading="eager"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full border-0"
+              />
             </div>
           </div>
         </div>
       </div>
-
-      {/* Video Modal */}
-      <VideoModal 
-        isOpen={showVideo} 
-        onClose={() => setShowVideo(false)} 
-        videoId="4jY96QBv-H4"
-      />
     </section>
   );
 };
