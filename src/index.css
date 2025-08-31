@@ -234,3 +234,34 @@ header .brand-icon,
 header svg[aria-hidden="true"] {
   display: none !important;
 }
+
+/* Marca com degradê FIXO e levemente maior */
+.brand-name {
+  font-size: clamp(1.08em, 2.2vw, 1.2em);
+  letter-spacing: 0.2px;
+  background: linear-gradient(90deg, #FFFFFF 0%, #FF8A00 50%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* necessário para o clip */
+}
+
+/* Efeito "cursor" piscando no texto digitado */
+.typewriter {
+  position: relative;
+  white-space: nowrap;
+}
+.typewriter::after {
+  content: "│";
+  margin-left: 4px;
+  animation: caretBlink 1s steps(1) infinite;
+  opacity: 0.9;
+}
+@keyframes caretBlink {
+  0%, 49% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+/* Acessibilidade: menos movimento se o usuário preferir */
+@media (prefers-reduced-motion: reduce) {
+  .typewriter::after { animation: none; opacity: 1; }
+}

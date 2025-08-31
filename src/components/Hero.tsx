@@ -21,10 +21,10 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="text-center md:text-left">
-            <h1 className="clamp-heading-1 font-bold text-adpm-white mb-6">
-              Conclua o <span className="text-adpm-orange">Ensino Médio</span> em 90 dias
-              <br />
-              <span className="text-adpm-orange">100% Online</span>
+            <h1 className="clamp-heading-1 font-extrabold leading-tight text-white mb-6">
+              <span className="brand-name">ADPM EJA Supletivo EAD</span>
+              {" — "}
+              <span id="rotating-text" className="typewriter" aria-live="polite">Diploma EJA em 90 dias</span>
             </h1>
             
             <p className="clamp-body text-adpm-light-gray mb-8 max-w-lg mx-auto md:mx-0">
