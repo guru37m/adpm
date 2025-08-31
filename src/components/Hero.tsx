@@ -1,4 +1,5 @@
 import { MessageCircle, ShieldCheck, Award, Headphones } from "lucide-react";
+import RotatingType from "./RotatingType";
 
 const Hero = () => {
   const whatsappUrl = "https://wa.me/5516997660880?text=Quero%20Meu%20Diploma%20do%20EJA";
@@ -24,7 +25,13 @@ const Hero = () => {
             <h1 className="clamp-heading-1 font-extrabold leading-tight text-white mb-6">
               <span className="brand-name">ADPM EJA Supletivo EAD</span>
               {" — "}
-              <span id="rotating-text" className="typewriter" aria-live="polite">Diploma EJA em 90 dias</span>
+              <RotatingType
+                phrases={[
+                  "Diploma EJA em 90 dias",
+                  "Parcelas de Apenas R$74,90",
+                  "Estude sem sair de casa",
+                ]}
+              />
             </h1>
             
             <p className="clamp-body text-adpm-light-gray mb-8 max-w-lg mx-auto md:mx-0">
