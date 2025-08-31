@@ -1,5 +1,6 @@
 import { MessageCircle, ShieldCheck, Award, Headphones } from "lucide-react";
 import RotatingType from "./RotatingType";
+import VideoWithBrand from "./VideoWithBrand";
 
 const Hero = () => {
   const whatsappUrl = "https://wa.me/5516997660880?text=Quero%20Meu%20Diploma%20do%20EJA";
@@ -80,15 +81,8 @@ const Hero = () => {
 
           {/* Right Column - Video */}
           <div className="flex justify-center">
-            <div className="aspect-video w-full max-w-md rounded-xl overflow-hidden shadow-2xl bg-black">
-              <iframe
-                src="https://www.youtube.com/embed/4jY96QBv-H4?rel=0&modestbranding=1&playsinline=1"
-                title="Depoimento ADPM"
-                loading="eager"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{width: '100%', aspectRatio: '16/9', border: 0, borderRadius: '12px', background: '#000'}}
-              />
+            <div className="w-full max-w-md">
+              <VideoWithBrand />
             </div>
           </div>
         </div>
