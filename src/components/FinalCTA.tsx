@@ -17,7 +17,7 @@ const FinalCTA = () => {
 
   const checklist = [
     "90 dias em média",
-    "R$ 749 (10× R$ 74,90)",
+    "R$ 749 (6× R$ 125)",
     "Reconhecido pelo MEC"
   ];
 
