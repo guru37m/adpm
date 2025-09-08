@@ -9,7 +9,7 @@ interface UrgencyPopupProps {
 const UrgencyPopup = ({ isOpen, onClose }: UrgencyPopupProps) => {
   const [timeLeft, setTimeLeft] = useState(15 * 60); // 15 minutes in seconds
 
-  const whatsappUrl = "https://wa.me/5516997660880?text=Quero%20Meu%20Diploma%20do%20EJA";
+  const whatsappUrl = "https://wa.me/5516992021186?text=Quero%20Terminar%20meus%20Estudos";
 
   const handleWhatsAppClick = () => {
     // Track conversion event
