@@ -4,15 +4,7 @@ const PriceOffer = () => {
   const whatsappUrl = "https://wa.me/5516992021186?text=Quero%20Terminar%20meus%20Estudos";
 
   const handleWhatsAppClick = () => {
-    // Track conversion event
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-    }
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL'
-      });
-    }
+    return (window as any).gtag_report_conversion(whatsappUrl);
   };
 
   const features = [
