@@ -93,7 +93,7 @@ const UrgencyPopup = ({ isOpen, onClose }: UrgencyPopupProps) => {
             </div>
             
             <p className="text-muted-foreground">
-              ou <strong>6× de R$ 125</strong> no cartão
+              <strong>6x de R$135</strong> no boleto
             </p>
           </div>
 

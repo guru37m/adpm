@@ -32,7 +32,7 @@ const PriceOffer = () => {
                 Por apenas R$ 749,00
               </div>
               <p className="installments text-xl font-semibold text-muted-foreground">
-                ou <strong>6× de R$ 125</strong> no cartão
+                <strong>6x de R$135</strong> no boleto
               </p>
             </div>
 
