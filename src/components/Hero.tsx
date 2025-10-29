@@ -21,7 +21,7 @@ const Hero = () => {
               <RotatingType
                 phrases={[
                   "Diploma EJA em 90 dias",
-                  "Parcelas de Apenas R$125",
+                  "Parcelas de Apenas R$135",
                   "Estude sem sair de casa",
                 ]}
               />
