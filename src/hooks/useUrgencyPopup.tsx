@@ -12,7 +12,7 @@ export const useUrgencyPopup = () => {
       return;
     }
 
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
     let scrollThreshold = false;
 
     // Desktop: exit intent + 20s timer
