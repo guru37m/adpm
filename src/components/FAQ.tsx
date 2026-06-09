@@ -4,7 +4,7 @@ import { useState } from "react";
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   
-  const whatsappUrl = "https://wa.me/5511970133383?text=Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20EJA";
+  const whatsappUrl = "https://wa.me/5591987288797?text=Quero%20me%20matricular%20no%20EJA";
 
   const handleWhatsAppClick = () => {
     return (window as any).gtag_report_conversion(whatsappUrl);
